@@ -20,6 +20,14 @@ conda install -c conda-forge nvidia-apex
 pip install -r requirements.txt
 python -m spacy download en_core_web_lg
 ```
+## Troubleshooting
+
+- Make sure to add `tensorboardX` to your `requirements.txt`.
+- If you encounter errors with stopwords, add the following lines at the top of `train_ditto.py`:
+
+```python
+import nltk
+nltk.download('stopwords')
 
 ## The EM pipeline
 
